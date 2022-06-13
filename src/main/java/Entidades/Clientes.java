@@ -9,6 +9,7 @@ import javax.persistence.*;
         @NamedQuery(name = "Clientes.findAll", query = "SELECT c FROM Clientes c"),
         //query to select all the clientes with a given name
         @NamedQuery(name = "Clientes.findByName", query = "SELECT c FROM Clientes c WHERE c.nombre = :nombre"),
+        @NamedQuery(name = "Clientes.findByoperaciones", query = "SELECT Nombre,Apellidos,cantidad,Fecha FROM clientes p LEFT JOIN operaciones pcc ON p.idclientes = pcc.clientes_idclientes"),
 
 
 

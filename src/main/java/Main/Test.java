@@ -21,7 +21,8 @@ public class Test {
         System.out.println("4. Insertar Una Operacion");
         System.out.println("5. Encontrar un cliente por nombre");
         System.out.println("6. Encontrar operaciones de mas de x cantidad");
-        System.out.println("7. Salir");
+        System.out.println("7. Encontrar todos los clientes que han hecho operaciones");
+        System.out.println("8. Salir");
 
         int opcion=0;
         while (opcion!=7){
@@ -76,6 +77,9 @@ public class Test {
                 od.EncontrarPorCantidad(cantidad2).forEach(lista->{System.out.println(lista.toString());});
                 break;
             case 7:
+                cd.EncontrarPorOperaciones().forEach(lista->{System.out.println(lista.toString());});
+                break;
+            case 8:
                 System.out.println("Saliendo");
                 break;
             default:

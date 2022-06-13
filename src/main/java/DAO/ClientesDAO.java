@@ -48,6 +48,15 @@ public class ClientesDAO {
         return lista;
     }
 
+    //Metodo para la query findbyoperaciones
+    public List<Clientes> EncontrarPorOperaciones() {
+        EntityManager em = emfactory.createEntityManager();
+        Query query1 = em.createNamedQuery("Clientes.findByoperaciones", Clientes.class);
+        List<Clientes> lista = (List<Clientes>) query1.getResultList();
+        em.close();
+        return lista;
+    }
+
 
 }
 
