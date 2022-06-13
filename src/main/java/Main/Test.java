@@ -35,7 +35,7 @@ public class Test {
                 cd.insertar(c);
                 break;
             case 2:
-                //imprimir por panrtalla todos los clientes
+                //imprimir por pantalla todos los clientes
                 cd.EncontrarTodos().forEach(lista->{System.out.println(lista.toString());});
 
                 break;

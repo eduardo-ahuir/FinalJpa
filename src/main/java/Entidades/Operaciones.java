@@ -58,4 +58,12 @@ public class Operaciones {
         this.fecha = fecha;
     }
 
+    //metodo tostring sin id
+    @Override
+    public String toString() {
+        return "Operaciones{" +
+                "cantidad=" + cantidad +
+                ", fecha='" + fecha + '\'' +
+                '}';}
+
 }
