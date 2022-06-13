@@ -21,7 +21,7 @@ public class OperacionesDAO {
     }
 
     //metodo para encontrar todos los operaciones
-    public static List<Operaciones> EncontrarTodos() {
+    public List<Operaciones> EncontrarTodos() {
         EntityManager em = emfactory.createEntityManager();
         Query query1 = em.createNamedQuery("Operaciones.findAll", Operaciones.class);
         List<Operaciones> lista = (List<Operaciones>) query1.getResultList();
@@ -30,7 +30,7 @@ public class OperacionesDAO {
     }
 
     //metodo para encontrar una operacion con una cantidad determinada
-    public static List<Operaciones> EncontrarPorCantidad(int cantidad) {
+    public List<Operaciones> EncontrarPorCantidad(int cantidad) {
         EntityManager em = emfactory.createEntityManager();
         Query query1 = em.createNamedQuery("Operaciones.findByCantidad", Operaciones.class);
         query1.setParameter("cantidad", cantidad);

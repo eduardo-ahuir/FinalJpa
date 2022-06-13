@@ -30,7 +30,7 @@ public class ClientesDAO {
     }
 
     //metodo para encontrar todos los clientes
-    public static List<Clientes> EncontrarTodos() {
+    public List<Clientes> EncontrarTodos() {
         EntityManager em = emfactory.createEntityManager();
         Query query1 = em.createNamedQuery("Clientes.findAll", Clientes.class);
         List<Clientes> lista = (List<Clientes>) query1.getResultList();
@@ -39,7 +39,7 @@ public class ClientesDAO {
     }
 
     //metodo para encontrar un cliente por su nombre
-    public static List<Clientes> EncontrarPorNombre(String nombre) {
+    public List<Clientes> EncontrarPorNombre(String nombre) {
         EntityManager em = emfactory.createEntityManager();
         Query query1 = em.createNamedQuery("Clientes.findByNombre", Clientes.class);
         query1.setParameter("nombre", nombre);

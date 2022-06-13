@@ -23,9 +23,10 @@ public class Test {
         System.out.println("6. Encontrar operaciones de mas de x cantidad");
         System.out.println("7. Salir");
 
-        int opcion = tcl.nextInt();
+        int opcion=0;
         while (opcion!=7){
-        switch(opcion){
+        opcion=tcl.nextInt();
+            switch(opcion){
             case 1:
                 System.out.println("Introduce el nombre del cliente");
                 c.setNombre(tcl.nextLine());
@@ -54,7 +55,7 @@ public class Test {
                 }
 
                 o.setCantidad(tcl.nextInt());
-                System.out.println("Introduce la fecha en la cual se realizo la operacion");
+                System.out.println("Introduce la fecha en la cual se realizo la operacion formato dd/mm/aaaa");
                 //se comprueba que tiene un formato de dia mes año valido separado por /
                 if(tcl.nextLine().matches("^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\\d\\d$")){
                     o.setFecha(tcl.nextLine());
