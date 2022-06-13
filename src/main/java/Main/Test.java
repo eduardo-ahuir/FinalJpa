@@ -22,8 +22,9 @@ public class Test {
         System.out.println("5. Encontrar un cliente por nombre");
         System.out.println("6. Encontrar operaciones de mas de x cantidad");
         System.out.println("7. Salir");
+
         int opcion = tcl.nextInt();
-        tcl.nextLine();
+        while (opcion!=7){
         switch(opcion){
             case 1:
                 System.out.println("Introduce el nombre del cliente");
@@ -85,6 +86,6 @@ public class Test {
 
 
         }
-    }
+    }}
 
 }
