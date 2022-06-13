@@ -51,7 +51,7 @@ public class ClientesDAO {
     //Metodo para la query findbyoperaciones
     public List<Clientes> EncontrarPorOperaciones() {
         EntityManager em = emfactory.createEntityManager();
-        Query query1 = em.createNamedQuery("Clientes.findByoperaciones", Clientes.class);
+        Query query1 = em.createNamedQuery("Clientes.findByOperaciones", Clientes.class);
         List<Clientes> lista = (List<Clientes>) query1.getResultList();
         em.close();
         return lista;

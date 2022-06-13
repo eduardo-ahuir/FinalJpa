@@ -9,8 +9,9 @@ import javax.persistence.*;
         @NamedQuery(name = "Clientes.findAll", query = "SELECT c FROM Clientes c"),
         //query to select all the clientes with a given name
         @NamedQuery(name = "Clientes.findByName", query = "SELECT c FROM Clientes c WHERE c.nombre = :nombre"),
-        @NamedQuery(name = "Clientes.findByoperaciones", query = "SELECT Nombre,Apellidos,cantidad,Fecha FROM clientes p LEFT JOIN operaciones pcc ON p.idclientes = pcc.clientes_idclientes"),
-
+        //query original:SELECT * FROM Clientes p LEFT JOIN Operaciones pcc ON p.idclientes = pcc.idoperaciones
+        //query anterior en jpa
+        @NamedQuery(name = "Clientes.findByOperaciones", query = "SELECT c FROM Clientes c LEFT JOIN Operaciones o ON c.id = o.id.clientesIdclientes"),
 
 
 
